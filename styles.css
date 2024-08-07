@@ -1,0 +1,233 @@
+:root {
+  /* Variables CSS para colores y fuentes */
+  --color-background: #7AA451;
+  --color-input-bg: #B7F1B2;
+  --color-header: #225E0C;
+  --color-footer: #D9D9D9;
+  --color-btn-encrypt: #09500B;
+  --color-btn-decrypt: #80F86C;
+  --font-main: 'Inter', sans-serif;
+  --font-title: 'Anton', sans-serif;
+  --font-footer: 'Pacifico', cursive;
+}
+
+* {
+  /* Reset CSS básico */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Estilos generales del cuerpo */
+  font-family: var(--font-main);
+  background: var(--color-background);
+}
+
+.header {
+  /* Estilos del encabezado */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--color-header);
+  color: white;
+}
+
+.header__logo-container {
+  /* Contenedor del logo y título */
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  /* Estilos del logo */
+  height: 40px;
+  margin-right: 10px;
+}
+
+.header__title {
+  /* Estilos del título principal */
+  font-family: var(--font-title);
+  font-size: 36px;
+}
+
+.header__social-links a {
+  /* Estilos de los enlaces de redes sociales */
+  color: white;
+  font-size: 20px;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.main-container {
+  /* Contenedor principal */
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  height: calc(100vh - 140px);
+}
+
+.encrypt-section {
+  /* Sección de encriptación */
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.encrypt-section__label {
+  /* Estilos de la cita */
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+.encrypt-section__input {
+  /* Estilos del área de texto */
+  width: 100%;
+  height: 400px;
+  margin-bottom: 20px;
+  border: none;
+  font-family: var(--font-main);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  background-color: var(--color-input-bg);
+  resize: none;
+  padding: 20px;
+  border-radius: 34px;
+}
+
+.encrypt-section__input::placeholder {
+  /* Estilos del placeholder del área de texto */
+  color: #225E0C;
+}
+
+.encrypt-section__input:focus,
+.encrypt-section__input:active {
+  /* Estilos al enfocar o activar el área de texto */
+  border: none;
+  outline: none;
+}
+
+.encrypt-section__terms {
+  /* Estilos del contenedor de términos */
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.encrypt-section__info-icon {
+  /* Estilos del icono de información */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #0a3871;
+  color: white;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.encrypt-section__terms p {
+  /* Estilos del texto de términos */
+  font-size: 12px;
+  color: #495057;
+}
+
+.encrypt-section__buttons {
+  /* Contenedor de botones */
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+.encrypt-section__btn {
+  /* Estilos base de los botones */
+  padding: 15px;
+  width: 25%;
+  border-radius: 24px;
+  font-size: 18px;
+  cursor: pointer;
+  border: 1px solid #09500B;
+}
+
+.encrypt-section__btn--encrypt {
+  /* Estilos específicos del botón de encriptar */
+  background-color: var(--color-btn-encrypt);
+  color: #FFFFFF;
+  border: none;
+}
+
+.encrypt-section__btn--decrypt {
+  /* Estilos específicos del botón de desencriptar */
+  background-color: var(--color-btn-decrypt);
+  color: #225E0C;
+  border: 1px solid #09500B;
+}
+
+.result-section {
+  /* Estilos de la sección de resultados */
+  width: 30%;
+  background: white;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-section__image {
+  /* Estilos de la imagen de resultado */
+  max-width: 70%;
+  margin-bottom: 20px;
+}
+
+.result-section__message {
+  /* Estilos del mensaje de resultado */
+  text-align: center;
+}
+
+.result-section__title {
+  /* Estilos del título de resultado */
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #343A40;
+}
+
+.result-section__paragraph {
+  /* Estilos del párrafo de resultado */
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: 16px;
+  color: #495057;
+}
+
+.footer {
+  /* Estilos del pie de página */
+  background-color: var(--color-footer);
+  color: #333;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-family: var(--font-footer);
+}
+
+/* Media query para diseño responsivo */
+@media (max-width: 768px) {
+  .main-container {
+      flex-direction: column;
+  }
+}
